@@ -20,7 +20,6 @@ router.post('/api/shortUrl', async (req: Request, res: Response) => {
 
 router.get('/api/shortUrl/:shortUrl', async (req: Request, res: Response) => {
     const { shortUrl } = req.params
-
     try {
         const urlEntity = await shortenUrlController.getUrl(shortUrl)
         if(!urlEntity)
@@ -28,14 +27,14 @@ router.get('/api/shortUrl/:shortUrl', async (req: Request, res: Response) => {
 
         if(urlEntity.longUrl)
             return res.redirect(urlEntity.longUrl)
-        res.status(203)
+        res.status(204)
     } catch (error) {
         console.error('Server Error in getting URL', error)
         res.status(500).json({ message: 'Server Error in getting URL' })
     }
 })
 
-router.get('/api/shortUrl/analytics', async (req: Request, res: Response) => {
+router.get('/api/shortUrls/analytics', async (req: Request, res: Response) => {
     try {
        const analytics = await shortenUrlController.getAnalytics()
         res.status(200).send(analytics)

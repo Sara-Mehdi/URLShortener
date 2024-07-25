@@ -1,0 +1,25 @@
+Arch:
+You will find in this repo, this type of architecture:
+
+URLShortener
+|__app
+    |__ controller
+    |__ routes
+    |__ service
+|__DB
+    |__ Url
+    |__conf (database configuration)
+|__Tests
+    |__ shortenUrl.test
+|__index
+
+
+SetUP:
+npm start => to start the server and the db
+npm jest => to run the tests
+
+DB:
+I used a model based on Postgresql using TypeOrm
+The database connexion is set up in the index.ts but I didn't really tried to run it, since it's not
+what really matters here, what I try to communicate is how I viewed the use case and how I tried to solve it
+

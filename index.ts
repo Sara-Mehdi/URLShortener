@@ -11,7 +11,6 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // Routes
-console.log('process.env.BACK_URL', process.env.BACK_URL)
 app.use(router)
 
 createConnection().then(() => {

@@ -5,13 +5,13 @@ export class ShortenedUrls extends BaseEntity{
     @PrimaryGeneratedColumn({type: 'integer', name: 'id'})
     id?: number
 
-    @Column({type: 'string', name: 'long_url'})
+    @Column({type: 'character varying', name: 'long_url'})
     longUrl?: string
 
-    @Column({type: 'string', name: 'short_url'})
+    @Column({type: 'character varying', name: 'short_url'})
     shortUrl?: string
 
-    @Column({ type: 'number', name: 'nb_clicks', default: 0})
+    @Column({ type: 'integer', name: 'nb_clicks', default: 0})
     nbClicks?: number
 
     toShare() {

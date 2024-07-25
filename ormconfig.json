@@ -1,10 +1,10 @@
 {
   "type": "postgres",
   "host": "localhost",
-  "port": 5432,
-  "username": "username",
-  "password": "pass",
-  "database": "dbLocal",
+  "port": 6969,
+  "username": "hur6w0bpkpb6hpv8",
+  "password": "DUrvPCKSVCtaJREB7XgYB2LmSm90YpZ9",
+  "database": "3js942p2auy6ccyz",
   "synchronize": true,
   "logging": false,
   "entities": ["src/entity/**/*.ts"]

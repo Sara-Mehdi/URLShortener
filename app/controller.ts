@@ -4,7 +4,9 @@ import { ShortenedUrls } from "../DB/Url"
 class ShortUrlController {
     async createShortUrl(url: string) {
         try {
-            await shortenUrlService.create(url)
+            const result = await shortenUrlService.create(url)
+            if (result)
+                return result.shortUrl
         } catch (error) {
             console.error('Error in shortening the url', error)
             throw new Error(`Error in shortening the url: ${ error }`)
